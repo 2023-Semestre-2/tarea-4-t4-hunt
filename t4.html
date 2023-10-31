@@ -6,26 +6,45 @@
         <title>Page Title</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="t4.css">
-        <meta http-equiv="refresh" content="10">
     </head>
     <body>
         <header>
             <nav>
-                <image src="image1.jpg" alt="Image 1">
+                <div class="logo-container">
+                    <img class="logo" src="./img/stock logo.png" alt="Image 1">
+                </div>
                 <!-- a search bar container with a button-->
                 <form class="search-container" >
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit">Submit</button>
+                    <input type="text" placeholder="Buscar.." name="search">
+                    <button type="submit"><img src="./icons/search.png" style="height: 24px; width: auto;" alt="Icono buscar">
+                    </button>
                 </form>
-                <ul>
-                    <li><a href="#">Jean Hunt</a></li>
-                    <image src="image1.jpg" alt="Image 1">
-                </ul>
+                <div class="menu-container">
+                    <li><a href="#">Isaiah Smith</a></li>
+                    <img class="pfp" src="./img/pfp2.png" alt="foto perfil">
+                </div>
             </nav>
         </header>
         <div class="container" >
         <aside class="left-aside">
-            <h3>Left Aside</h3>
+            <ul class="menu-lateral" >
+                <li><button>
+                    <img src="./icons/house-blank.png " alt="Icono inicio" style="margin-right: 10px;">
+                    Inicio
+                </button></li>
+                <li><button>
+                    <img src="./icons/search.png" alt="Icono buscar" style="margin-right: 10px;">
+                    Buscar
+                </button></li>
+                <li><button>
+                    <img src="./icons/bell.png" alt="Icono notificaciones" style="margin-right: 10px;">
+                    Notificaciones
+                </button></li>
+                <li><button>
+                    <img src="./icons/inbox-in.png" alt="Icono mensajes" style="margin-right: 10px;">
+                    Mensajes
+                </button></li>
+            </ul>
             
         </aside>
         <main>
@@ -33,15 +52,36 @@
                 <div class="create-post" >
 
                     <div class="image-container">
-                        <img src="image1.jpg" alt="Image 1">
+                        <img src="./img/pfp2.png" alt="foto perfil post">
                     </div>
                     <div class="post-container">
-                        <textarea placeholder="What's on your mind?" rows="1" cols="40" maxlength="128" style="resize: none;"></textarea>
+                        <textarea 
+                                placeholder="¿En que piensas?" 
+                                rows="1" cols="40" 
+                                maxlength="128" 
+                                style="resize: none;" 
+                                oninput="this.rows = Math.ceil(this.value.length / 40); updateCharCount()"
+                        ></textarea>
+                        <span id="char-count">0/128</span>
+
+                        <script>
+                        function updateCharCount() {
+                            const textarea = document.querySelector('textarea');
+                            const charCount = document.querySelector('#char-count');
+                            charCount.textContent = `${textarea.value.length}/128`;
+                        }
+                        </script>
                         <div class="buttons-container">
-                            <button>Photo</button>
-                            <button>Video</button>
-                            <button>Tag</button>
-                            <button>Post</button>
+                            <button>
+                                <img src="./icons/picture.png" alt="Icono imagen" style="margin-right: 5px;">
+                            </button>
+                            <button>
+                                <img src="./icons/video.png" alt="Icono video" style="margin-right: 5px;">
+                            </button>
+                            <button>
+                                <img src="./icons/at.png" alt="Icono etiquetar" style="margin-right: 5px;">
+                            </button>
+                            <button>Publicar</button>
                         </div>
                     </div>
                 </div>
@@ -49,67 +89,168 @@
 
             <section>
                 <article>
-                    <h2>Article 1</h2>
-                    <img src="image1.jpg" alt="Image 1">
-                    <p>Content for article 1</p>
+                    <div class="user-info-post">
+                        <img src="./img/pfpMeowed.jpg" alt="Foto perfil meowed">
+                        <p>Meowed</p>
+                        <p>Hace 3 minutos</p>
+                    </div>
+                    <p>Abrazando la serenidad, esta bella durmiente se adentra con gracia en un mundo de sueños, 
+                        con los bigotes moviéndose y las patas metidas, una imagen perfecta de la tranquilidad felina. 🐾💤</p>
+                    <div class="media-container">
+                        <img src="./img/img1.jpg" alt="gato durmiendo en sabanas">
+                    </div>
+                    <div class="buttons-container">
+                        <button>
+                            <img src="./icons/comments.png" alt="Icono comentarios" style="margin-right: 5px;">
+                            14
+                        </button>
+                        <button>
+                            <img src="./icons/corazon.png" alt="Icono like" style="margin-right: 5px;">
+                            80
+                        </button>
+                        <button>
+                            <img src="./icons/bookmark.png" alt="Icono Favoritos" style="margin-right: 5px;">
+                            5
+                        </button>
+                    </div>
                 </article>
-                
-                <article>
-                    <h2>Article 2</h2>
-                    <p>Content for article 2</p>
-                    <!--
 
+                <article>
+                    <div class="user-info-post">
+                        <img src="./img/pfpMeowed.jpg" alt="Foto perfil meowed">
+                        <p>Meowed</p>
+                        <p>Hace 3 minutos</p>
+                    </div>
+                    <p>Nunca te atrevas a retar a un gatito a un duelo!</p>
+                    <div class="media-container">
+                        <video width="951" height="535" controls alt="Gato jugando con su dueño"> 
+                            <source src="./img/video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="buttons-container">
+                        <button>
+                            <img src="./icons/comments.png" alt="Icono comentarios" style="margin-right: 5px;">
+                            24
+                        </button>
+                        <button>
+                            <img src="./icons/corazon.png" alt="Icono like" style="margin-right: 5px;">
+                            129
+                        </button>
+                        <button>
+                            <img src="./icons/bookmark.png" alt="Icono Favoritos" style="margin-right: 5px;">
+                            51
+                        </button>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="user-info-post">
+                        <img src="./img/pfpValorant.png" alt="Foto perfil Valorant">
+                        <p>Valorant</p>
+                        <p>Hace 3 horas</p>
+                    </div>
+                    <p>Elige una pelea y presiona reproducir. La lista de reproducción de Spotify 
+                        de Iso está lista para ser la pista de acompañamiento de tu próxima paliza a muerte.
+                    </p>
+                    <a href="riot.com/478XAF5" >riot.com/478XAF5 </a>
+                    <div class="media-container">
+                        <img src="./img/iso.png" alt="Imagen agente valorant iso">
+                    </div>
+                    <div class="buttons-container">
+                        <button>
+                            <img src="./icons/comments.png" alt="Icono comentarios" style="margin-right: 5px;">
+                            151
+                        </button>
+                        <button>
+                            <img src="./icons/corazon.png" alt="Icono like" style="margin-right: 5px;">
+                            821
+                        </button>
+                        <button>
+                            <img src="./icons/bookmark.png" alt="Icono Favoritos" style="margin-right: 5px;">
+                            220
+                        </button>
+                    </div>
+                </article>
+
+
+                <article>
+                    <div class="user-info-post">
+                        <img src="./img/pfpGrian.jpg" alt="Foto perfil Grian">
+                        <p>Grian</p>
+                        <p>Hace 2 dias</p>
+                    </div>
+                    <p>¡Bienvenido a la próxima serie de vida, vida secreta! ¡Tenemos 30 corazones por vida, sin regeneración y un montón de secretos! 
+                    </p>
+                    <div class="media-container">
+                        
                         <iframe 
-                        width="951" height="535" src="https://www.youtube.com/embed/HMKDw6XtRvc" 
+                        width="512" height="288"
+                        alt="Secret Life: Episode 2 - MORE DOORS FOR ME!"
+                        src="https://www.youtube.com/embed/HMKDw6XtRvc" 
                         title="Secret Life: Episode 2 - MORE DOORS FOR ME!" frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
+                        allowfullscreen    
+                        >
                     </iframe>
-                -->
-                    
-                    
+                    </div>
+                    <div class="buttons-container">
+                        <button>
+                            <img src="./icons/comments.png" alt="Icono comentarios" style="margin-right: 5px;">
+                            102
+                        </button>
+                        <button>
+                            <img src="./icons/corazon.png" alt="Icono like" style="margin-right: 5px;">
+                            234
+                        </button>
+                        <button>
+                            <img src="./icons/bookmark.png" alt="Icono Favoritos" style="margin-right: 5px;">
+                            21
+                        </button>
+                    </div>
                 </article>
             </section>
         </main>
         <aside class="right-aside">
-            <h3>Aside</h3>
+            <h3>Perfiles sugeridos</h3>
             <!--show a list of suggested profiles as photo + name + follow button-->
             <ul class="perfiles-sugeridos">
                 <li class="perfil-sugerido">
-                    <img src="image1.jpg" alt="Image 1">
-                    <p>Profile 1</p>
-                    <button>Follow</button>
+                    <img src="./img/pfpBarked.png" alt="Foto perfil barked">
+                    <p>Barked</p>
+                    <button>Seguir</button>
                 </li>
                 
                 <li class="perfil-sugerido">
-                    <img src="image1.jpg" alt="Image 1">
-                    <p>Profile 1</p>
-                    <button>Follow</button>
+                    <img src="./img/pfpBadBunny.png" alt="Foto perfil Bad Bunny">
+                    <p>Bad Bunny</p>
+                    <button>Seguir</button>
                 </li>
 
                 <li class="perfil-sugerido">
-                    <img src="image1.jpg" alt="Image 1">
-                    <p>Profile 1</p>
-                    <button>Follow</button>
+                    <img src="./img/pfpDrake.png" alt="Foto perfil Drake">
+                    <p>Drake</p>
+                    <button>Seguir</button>
                 </li>
 
                 <li class="perfil-sugerido">
-                    <img src="image1.jpg" alt="Image 1">
-                    <p>Profile 1</p>
-                    <button>Follow</button>
+                    <img src="./img/pfpKyedae.png" alt="Foto perfil Kyedae">
+                    <p>Kyedae</p>
+                    <button>Seguir</button>
                 </li>
 
                 <li class="perfil-sugerido">
-                    <img src="image1.jpg" alt="Image 1">
-                    <p>Profile 1</p>
-                    <button>Follow</button>
+                    <img src="./img/pfpmessi.png" alt="Foto perfil Messi">
+                    <p>Lionel Messi</p>
+                    <button>Seguir</button>
                 </li>
                 
             </ul>
         </aside>
         </div>
         <footer>
-            <p>Footer</p>
+            <img src="./img/stock logo.png" alt="Image 1">
+            <p>© 2021 Stock Media, Inc. Todos los derechos reservados.</p>
         </footer>
     </body>
 </html>
