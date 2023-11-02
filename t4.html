@@ -1,10 +1,10 @@
 <!DOCTYPE html lang="es">
-<!--Home, Mensajes, notificaciones, perfil-->
 <html>
     
     <head>
         <title>Page Title</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="t4.css">
     </head>
     <body>
@@ -13,14 +13,13 @@
                 <div class="logo-container">
                     <img class="logo" src="./img/stock logo.png" alt="Image 1">
                 </div>
-                <!-- a search bar container with a button-->
                 <form class="search-container" >
                     <input type="text" placeholder="Buscar.." name="search">
                     <button type="submit"><img src="./icons/search.png" style="height: 24px; width: auto;" alt="Icono buscar">
                     </button>
                 </form>
                 <div class="menu-container">
-                    <li><a href="#">Isaiah Smith</a></li>
+                    <li id="nombre-usuario" ><a href="#">Isaiah Smith</a></li>
                     <img class="pfp" src="./img/pfp2.png" alt="foto perfil">
                 </div>
             </nav>
@@ -213,7 +212,6 @@
         </main>
         <aside class="right-aside">
             <h3>Perfiles sugeridos</h3>
-            <!--show a list of suggested profiles as photo + name + follow button-->
             <ul class="perfiles-sugeridos">
                 <li class="perfil-sugerido">
                     <img src="./img/pfpBarked.png" alt="Foto perfil barked">
