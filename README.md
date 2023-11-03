@@ -1,8 +1,29 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/MJ3L6qdi)
-# [NOMBRE DEL PROYECTO]
-### Nombre y carné de los integrantes: 
+
+# Tarea 4 - Adaptabilidad
+
+#### Estado del proyecto: Excelente
+#### Jean Hunt - 2018265223
+#### Enlace del video: https://youtu.be/sOGpaSk6o5I
 
 
-### Estado del proyecto:
-### Enlace del video:
-Recordar que el video debe ser público para ser visto por el profesor
+La tarea consistia en investigar sobre los conceptos de Viewports, Media Queries y aplicarlos en una página HTML que pueda adaptarse a 3 diferentes:
+- Escritorio
+- Tablet
+- Celular
+
+El tema de la página era libre pero debia de contener lo siguiente:
+- Un header
+- Footer
+- Nav
+- Aside
+- Articles
+- Section
+- Tener elementos de multimedia, como imágenes y video
+
+Por lo que se escogió desarrollar una pagina similar a los muros de instagram y twitter ya que se puede har uso de todos estos componentes. El enfoque principal de la tarea era la adaptabilidad por lo que se implementaron distintos cambios en los estilos de los componentes según el tamaño de la pantalla.
+
+
+## Anexos
+
+- [Link al video](https://youtu.be/sOGpaSk6o5I)
+
